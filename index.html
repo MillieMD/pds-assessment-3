@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Poppleton Dog Show</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class = header>
+
+        <!-- Logo, website title and sign up/register/enter 2024 button -->
+        <div class = "upper-header" id = "upper-header">
+
+            <!-- Logo -->
+            <div class = "header-title">
+                <!-- <img src = "#"> -->
+
+                <!-- Title -->
+                <div> The Poppleton Dog Show </div> 
+            </div>
+
+            <button class = "join-button"> Enter 2024</button>
+
+        </div>
+
+        <!-- Events, competitors, dogs, previous winners, contact etc. -->
+        <div class = "lower-header">
+
+            <div> Events </div>
+            <div> Competitors </div>
+            <div> Previous Winners </div>
+
+        </div>
+
+    </div>
+
+    <div class = "main-body">
+
+        <!-- Image of dog competition -->
+        <div class = "landing-image-wrapper">
+
+            <img src="img/dogs2.jpg" alt="Dog agility competition">
+
+            <!-- Box containing XYZ -->
+            <div class = "stat-display-box">
+
+                <h1> X Y Z </h1>
+
+            </div>
+
+        </div>
+
+        <!-- Out competitors banner -->
+        <!-- Dog/Owner toggle -->
+        <!-- 4 or 5 images, with names and view profile button -->
+        <!-- "More" button -->
+
+    </div>
+
+    <div class = "footer"> 
+
+        <!-- Social media icons as links -->
+        <div class = "social-media-wrapper"> 
+
+            <div>FB</div>
+            <div>T</div>
+            <div>I</div>
+
+        </div>
+
+        <!-- Contact, copyright, slavery agreement etc -->
+        <div class = "footer-info"> 
+
+            <div> Contact us </div>
+            <div> Contact us </div>
+            <div> Contact us </div>
+
+        </div>
+
+    </div>
+
+    <script> 
+
+        var upperHeader = document.getElementById("upper-header");
+        var offset = upperHeader.offsetTop;
+    
+        window.onscroll = function(){
+
+            if(window.pageYOffset > offset){
+                upperHeader.classList.add("header-stick");
+            }
+            else{
+                upperHeader.classList.remove("header-stick");
+            }  
+        };
+    
+    </script>
+	
+  </body>
+</html>
