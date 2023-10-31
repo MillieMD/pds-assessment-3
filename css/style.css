@@ -15,7 +15,7 @@ Updated: 30/10/23 */
 
 body{
 
-    background-color: var(--white);
+    background-color: var(--purple);
 
     margin: 0;
 
@@ -55,19 +55,6 @@ body{
 
 }
 
-.header-stick{
-
-    position: fixed;
-    top: 0;
-
-    width: 100%;
-
-}
-
-.header-stick + .main-body {
-    padding-top: 100px;
-}
-
 /* Header containing logo, website title and enter 2024 button */
 .header .upper-header{
 
@@ -79,7 +66,6 @@ body{
 
     font-size: 1em;
 
-    transition: padding 0.3s ease;
 
 }
 
@@ -106,6 +92,14 @@ body{
 .header .lower-header div{
 
     padding: 0.5vw;
+}
+
+.main-body{
+
+    background-color: var(--white);
+
+    text-align: center;
+
 }
 
 .footer{
@@ -144,26 +138,67 @@ body{
 /* Home Page */
 
 .landing-image-wrapper img{
+    
+    position: relative;
     width: 100%;
 }
 
 .landing-image-wrapper .stat-display-box{
 
     position: absolute;
-    left: 50%;  
-    right: 50%;
-    top: 50%;
-    bottom: 50%;
+    left: 20%;  
+    right: 20%;
+    top: 70%;
 
-}
-
-.landing-image-wrapper .stat-display-box h1{
+    text-align: center;
 
     background-color: var(--white);
     color:black;
 
+}
 
+.gallery-container{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin: 2vw;
+
+}
+
+.gallery-container .profile{
+
+    display:flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    font-size: 1rem;
+
+}
+
+.profile .profile-name{
+
+    font-style: bold;
+    font-size: 1.3em;
+
+}
+
+.profile .profile-subtitle{
+
+    font-size: 0.8em;
+    font-style: italic;
+
+}
+
+.profile .profile-score{
+
+    font-size: 1.5em;
+    font-weight: bolder;
 
 }
 
 /* Competitor Profiles */
+
+
