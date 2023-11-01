@@ -21,16 +21,16 @@
                 <div> The Poppleton Dog Show </div> 
             </div>
 
-            <button class = "join-button"> Enter 2024</button>
+            <button class = "white-button"> Enter 2024</button>
 
         </div>
 
         <!-- Events, dogs, previous winners etc. -->
         <div class = "lower-header">
 
-            <div> Events </div>
-            <div> Competitors </div>
-            <div> Previous Winners </div>
+            <a href = "#"> Events </a>
+            <a href = "pages/dogs.php"> Competitors </a>
+            <a href = "#"> Previous Winners </a>
 
         </div>
 
@@ -47,7 +47,7 @@
             <div class = "stat-display-box">
 
                 <h1> Welcome to The Popptleton Dog Show! <h1>
-                <h2>This year x owners have entered y dogs, into z events!<h2>
+                <h3>This year, x owners have entered y dogs, into z events!</h1>
                 
             </div>
 
@@ -254,9 +254,7 @@
 
         <!-- "More" button 
         (link to full dog list, alphabetised)-->
-        <form action="pages/dogs.php">
-            <input type = "submit" value = "More"/>
-        </form>
+        <button class = "purple-button" style = "font-size: 1.5em;"> More </button>
         
 
         
@@ -320,6 +318,19 @@
     </div>
 
     <script> 
+
+        var header = document.getElementById("upper-header");
+        var offset = header.offsetTop;
+
+        window.onscroll = function(){
+
+            if(window.pageYOffset > offset){
+                header.classList.add("sticky-header");
+            }else{
+                header.classList.remove("sticky-header");
+            }
+
+        };
     
     </script>
 	

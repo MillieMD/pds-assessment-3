@@ -27,7 +27,7 @@ body{
 
 /* BUTTONS */
 
-.join-button{
+.white-button{
 
     background-color: var(--white);
     color:black;
@@ -42,6 +42,23 @@ body{
     font-weight: bold;
 }
 
+.purple-button{
+
+    background-color: var(--purple);
+    color:var(--white);
+
+    border-radius: 16px;
+
+    margin: 0.2vw;
+    border: 0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.5em;
+    font-weight: bold;
+
+
+}
+
 /* SECTIONS */
 
 /* Site Wide */
@@ -50,6 +67,10 @@ body{
 
     background-color: var(--purple);
     color: var(--white);
+
+    position: sticky;
+    top: 0;
+    z-index: 5;
 
     font-size: 3rem;
 
@@ -62,7 +83,13 @@ body{
     flex-direction: row;
     justify-content: space-between;
 
+    position: relative;
+    z-index: 10;
+
     background-color: var(--purple);
+    box-shadow: 0px 1px 5px black;
+
+    padding:1vw;
 
     font-size: 1em;
 
@@ -84,12 +111,17 @@ body{
     display: flex;
     flex-direction: row;
 
+    position: relative;
+    z-index: 5;
+
+    box-shadow: 0px 2px 5px black;
+
     font-size: 0.5em;
 
 }
 
 /* elements in lower header */
-.header .lower-header div{
+.header .lower-header a{
 
     padding: 0.5vw;
 }
@@ -137,10 +169,16 @@ body{
 
 /* Home Page */
 
+.landing-image-wrapper{
+
+    position: relative;
+
+}
+
 .landing-image-wrapper img{
     
-    position: relative;
     width: 100%;
+
 }
 
 .landing-image-wrapper .stat-display-box{
@@ -148,12 +186,14 @@ body{
     position: absolute;
     left: 20%;  
     right: 20%;
-    top: 70%;
+    top: 20%;
 
     text-align: center;
 
     background-color: var(--white);
     color:black;
+
+    box-shadow: 2px 2px 5px black;
 
 }
 
