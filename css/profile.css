@@ -1,0 +1,13 @@
+/* Profile Page CSS
+By Millie MD
+27/11/23
+*/
+
+.owner-profile{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    padding: 5vw 40vw 5vw 5vw;
+}
+

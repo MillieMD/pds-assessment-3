@@ -1,0 +1,266 @@
+/* Poppleton Dog Show
+Millie Moorby-Davies
+Created: 30/10/23
+Updated: 22/11/23 */
+
+:root{
+
+--white: #f3f3f3;
+--purple: #2a143f;
+--gold: #edb321;
+
+}
+
+/* GENERAL */
+
+body{
+
+    background-color: var(--purple);
+
+    margin: 0;
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* TYPOGRAPHY */
+
+h1, h2, h3{
+    margin: 0;
+    padding: 0.3vw;
+}
+
+h1{
+
+    font-size: 3rem;
+}
+
+h3{
+
+    font-size: 1.5rem;
+
+}
+
+a{
+
+    text-decoration: none;
+
+
+}
+
+a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* BUTTONS */
+
+.white-button{
+
+    background-color: var(--white);
+    color:black;
+
+    border-radius: 16px;
+
+    margin: 0.2vw;
+    border: 0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.5em;
+    font-weight: bold;
+}
+
+.purple-button{
+
+    background-color: var(--purple);
+    color:var(--white);
+
+    border-radius: 16px;
+
+    margin: 0.2vw;
+    border: 0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.5em;
+    font-weight: bold;
+
+
+}
+
+/* SECTIONS */
+
+/* Needed for every page */
+
+.header{
+
+    background-color: var(--purple);
+    color: var(--white);
+
+    /* position: sticky; */
+    top: 0;
+    z-index: 5;
+
+    font-size: 3rem;
+
+}
+
+/* Header containing logo, website title and enter 2024 button */
+.header .upper-header{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 10;
+
+    background-color: var(--purple);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+
+    padding:1vw;
+
+    font-size: 1em;
+
+}
+
+/* Title and logo */
+.header .upper-header .header-title{
+ 
+    display: flex;
+    flex-direction: row;
+    word-wrap: nowrap;
+    padding: 0 0 0 1vw;
+    
+}
+
+/* dogs, competitors, events */
+.header .lower-header{
+
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+    z-index: 5;
+
+    box-shadow: 0 10px 5px 0 rgba(0,0,0,0.25),0 10px 10px 0 rgba(0,0,0,0.16);
+
+    font-size: 0.5em;
+
+    padding: 0 0 0 1.5vw;
+
+}
+
+/* elements in lower header */
+.header .lower-header a{
+
+    padding: 0.5vw 1vw 0.5vw 1vw;
+
+    color: white;
+    text-decoration: none;
+
+}
+
+.header .lower-header a:hover{
+
+    color: cyan;
+    text-decoration: underline;
+
+}
+
+.main-body{
+
+    position: relative;
+    background-color: var(--white);
+
+    text-align: center;
+
+}
+
+.footer{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--purple);
+    color: var(--white);
+
+}
+
+.footer .social-media-wrapper{
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 0.5vw;
+
+}
+
+.footer .footer-info{
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1vw;
+
+}
+
+/* Dog Cards + Gallery */
+
+/* Top Competitor's Gallery*/
+
+.gallery-container{
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1vw 2vw;
+
+    margin: 2vw 7vw;
+
+}
+
+.galler-contain .purple-button{
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+}
+
+.gallery-container .profile{
+
+    margin: 0;
+    padding: 0.2vw;
+
+    background-color: white;
+    border-radius: 16px;
+
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.10);
+
+    font-size: 1rem;
+
+}
+
+.profile .profile-name{
+
+    font-style: bold;
+    font-size: 1.3em;
+
+}
+
+.profile .profile-subtitle{
+
+    font-size: 0.8em;
+    font-style: italic;
+
+}
+
+.profile .profile-score{
+
+    font-size: 1.5em;
+    font-weight: bolder;
+
+}
+
+

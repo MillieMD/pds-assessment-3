@@ -1,0 +1,44 @@
+/* Poppleton Dog Show
+Millie Moorby-Davies
+Created: 22/11/23
+Updated: 22/11/23 */
+
+:root{
+
+    --white: #f3f3f3;
+    --purple: #2a143f;
+    --gold: #edb321;
+    
+    }
+
+/* Landing Page Image */
+
+.landing-image-wrapper{
+
+    position: relative;
+
+}
+
+.landing-image-wrapper img{
+    
+    width: 100%;
+
+}
+
+.landing-image-wrapper .stat-display-box{
+
+    position: absolute;
+    left: 20%;  
+    right: 20%;
+    top: 40%;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    background-color: var(--white);
+    color:black;
+
+    box-shadow: 0 10px 5px 0 rgba(0,0,0,0.25),0 10px 10px 0 rgba(0,0,0,0.16);
+
+}
