@@ -1,4 +1,4 @@
-# Popptleton Dog Show
+# Poppleton Dog Show
 
 ## Pages
 
@@ -10,21 +10,27 @@ Home page featuring:
     - [x] link to owners profile
     - [x] owners email + link to default mail application
 - [x] link to full list of dogs
-- [ ] header
+- [x] header
     - [x] link to dog list
-    - [ ] link to competition time table
+    - [x] link to competition time table
 
 ### Profile.php
 
-- [ ] picture
-- [ ] name
-- [ ] email (link to default mail app)
+- [x] picture (placeholder)
+- [x] name
+- [x] email (link to default mail app)
+- [x] list of all dogs
 
 ### Dogs.php
 
-- [ ] list every dog (name, breed, owner (profile link))
-    - [ ] alphabetised by name, and then grouped by owner name
+- [x] list every dog (name(profile link), breed, ~~owner~~)
+    - [x] alphabetised by name, and then ~~grouped by owner name~~
 
+### Events.php
+
+- [x] Timetable
+    - [x] sorted by day
+    - [x] sorted by time
 
 ## Other PHP
 

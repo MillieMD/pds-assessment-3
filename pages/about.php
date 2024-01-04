@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-    <title> Meet Our Owners - The Poppleton Dog Show </title>
+    
+    <title>The Poppleton Dog Show</title>
 
-    <!-- General css -->
-    <link rel="stylesheet" href="../css/main.css"> 
-    <!-- Profile specific sections -->
-    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/dogs.css">
 
-</head>
-<body>
+  </head>
+  <body>
 
 <div class = header>
 
@@ -42,123 +40,7 @@
 
 <div class = "main-body">
 
-<!-- Horizontal container for profile sections -->
-<div class = "owner-profile">
-
-    <!-- Placeholder image -->
-    <img src = "../img/profile.png"> 
-
-    <!-- Container for owner information -->
-    <div>
-        <?php
-
-            require_once "../php/database.php";
-
-            // Need: name, email dogs + events
-
-            $query = $db->prepare("SELECT owners.name, email, phone FROM owners WHERE id = ?;");
-            $query->bind_param("i", $_GET["owner"]); // Owner's id is passed into query from the URL
-            $query->execute();
-            $result = $query->get_result();
-
-            if($result === FALSE){
-                die("No competitor found with this ID");
-            }
-
-            if($result->num_rows <= 0){ // No rows found
-                die("No competitor found with this ID");
-            }
-
-            $row = $result->fetch_assoc();
-
-            echo("<h1>" .$row['name']. "</h1>");
-            echo("<a href = 'mailto: ".$row['email']."'> Email: " .$row['email']. "</a>");
-            echo("<p> Phone: " .$row['phone']. "</p>");
-
-            echo("</div></div>"); // End owner infomation section and owner profile wrapper div
-
-            $fname = explode(" ", $row["name"])[0];
-
-            // Dog gallery heading
-            echo("<h2> Meet " .$fname."'s Dogs: </h2>");
-
-        ?>
-
-    <div class = "gallery-container" id = "dog-gallery">
-
-            <?php
-                
-                require_once "../php/database.php";
-
-                // Retrieves dog id, name, breed name, the score for each event (or no event) and the events name
-
-                $query = $db -> prepare("SELECT dogs.id, dogs.name, breeds.name as breed, entries.score, events.description
-                FROM dogs
-                JOIN breeds ON dogs.breed_id = breeds.id
-                LEFT JOIN entries ON dogs.id = entries.dog_id
-                LEFT JOIN competitions ON entries.competition_id = competitions.id
-                LEFT JOIN events ON competitions.event_id = events.id
-                WHERE owner_id = ?
-                ORDER BY dogs.name ASC;");
-                $query->bind_param("i", $_GET["owner"]);
-                $query->execute();
-                $result = $query->get_result();
-
-                if($result === FALSE){
-                    die("No data could be found for this competitor");
-                }
-    
-                if($result->num_rows <= 0){ // No rows found
-                    die("There are currecntly no dogs associated with this owner, please check again at another time");
-                }
-    
-                $i = 0;
-                $currentDog = ""; // To track when results are about a new dog now
-                while($row = $result->fetch_assoc()){
-
-                    if($row["id"] != $currentDog){
-
-                        $currentDog = $row["id"];
-
-                        if($i > 0){
-                            echo("</div> </div>"); // Ends div that contains scores, then dog card
-                        }
-
-                        // Start new dog card
-                        echo("<div class = 'profile' id = 'profile-$i'>
-                        
-                        <img src = '../img/breeds/" .strtolower($row['breed']).".png' alt = " .$row['breed']." style = 'width: 30%;'>
-
-                        <div> 
-                            <p class = 'profile-name'> " .$row['name']. " </p>
-                            <p class = 'profile-subtitle'> " .$row['breed']. " </p>
-                        </div>
-
-                        <div>");
-
-                        $i++;
-
-                    }
-
-                    // For each row after this, all above info is the same but new scores and events appear, unless its a new dog
-                    if($row["score"] == null){ // Dog with null scores only have 1 row, so no need to check for repeats
-                        echo("This dog has not entered any events");
-                    }else{
-                        echo("<p class = ''>" .$row['description']. " (".$row['score'].") </p>");
-                    }
-
-                }
-
-                echo("</div> </div>"); // Ends last dog card
-                
-                
-            ?>
-
-    </div>
-
-
-<!-- Gallery -->
-    <!-- Dogs in cards -->
+</div> <!-- End of main body -->
 
 <div class = "footer"> 
 
@@ -205,8 +87,8 @@
 
     </div>
 
-<!-- Footer
-    Contains: about, contact etc -->
+    <!-- Footer
+        Contains: about, contact etc -->
     <div class = "footer-info"> 
 
         <div> About us </div>

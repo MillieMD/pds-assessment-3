@@ -1,0 +1,16 @@
+/* Poppleton Dog Show
+Millie Moorby-Davies
+Created: 30/12/23
+Updated: 30/12/23 */
+
+/* Time Table */
+
+
+table{
+    font-size: 0.8rem;
+    border-collapse: collapse;
+}
+
+table tr{
+    border-bottom: 1px solid;
+}
