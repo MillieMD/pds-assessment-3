@@ -11,7 +11,7 @@ Updated: 22/11/23 */
     
     }
 
-/* Landing Page Image */
+/* Landing Page Image & Stat Box*/
 
 .landing-image-wrapper{
 
@@ -43,97 +43,4 @@ Updated: 22/11/23 */
 
 }
 
-/* Top Competitor's Gallery*/
 
-.gallery-container{
-
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1vw 2vw;
-
-    margin: 2vw 7vw;
-
-}
-
-.galler-contain .purple-button{
-
-    grid-column-start: 3;
-    grid-column-end: 4;
-
-}
-
-.gallery-container .profile{
-
-    margin: 0;
-    padding: 0.2vw;
-
-    background-color: white;
-    border-radius: 16px;
-
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.10);
-
-    font-size: 1rem;
-
-}
-
-.profile .profile-name{
-
-    font-style: bold;
-    font-size: 1.3em;
-
-}
-
-.profile .profile-subtitle{
-
-    font-size: 0.8em;
-    font-style: italic;
-
-}
-
-.profile .profile-score{
-
-    font-size: 1.5em;
-    font-weight: bolder;
-
-}
-
-/* Gallery Toggle */
-
-.gallery-toggle{
-
-    position : relative ;
-    display : inline-block;
-    width : 100px;
-    height : 52px;
-    background-color: red;
-    border-radius: 30px;
-    border: 2px solid gray;
-
-}
-
-.gallery-toggle:after{
-
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: gray;
-    top: 1px; 
-    left: 1px;
-    transition:  all 0.5s;
-
-}
-
-.toggle:checked + .gallery-toggle:after{
-
-    left : 49px;
-}
-
-.toggle:checked + .gallery-toggle {
-    background-color: green;
-}
-       
-.toggle { 
-    display : none;
-}
