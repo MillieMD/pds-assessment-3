@@ -158,7 +158,7 @@
                     </div>
 
                     <div>
-                        <a href = '" .$row["owner_id"]. "'> <p clas = 'profile-subtitle'> " .$row['owner']. " </p> </a>
+                        <a href = 'pages/profile.php?owner=" .$row["owner_id"]. "'> <p clas = 'profile-subtitle'> " .$row['owner']. " </p> </a>
                         <a href = '#'> " .$row['email']. " </a>
                     </div>
 
@@ -244,8 +244,6 @@
     <script> 
 
     let galleryToggle = document.getElementById("gallery-toggle");
-
-
 
     </script>
 
