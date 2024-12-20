@@ -1,4 +1,6 @@
-# Poppleton Dog Show
+# Poppleton Dog Show (read only)
+
+**Module finished - archived**
 
 ## Pages
 
